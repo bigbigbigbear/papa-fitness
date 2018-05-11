@@ -1,29 +1,30 @@
 import request from '@/utils/request'
 
-export function loginByUsername(username, password) {
-  const data = {
-    username,
-    password
-  }
+export function login(username, password) {
   return request({
-    url: '/login/login',
+    baseURL: 'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin',
+    url: '/user/login',
     method: 'post',
-    data
+    data: {
+      username,
+      password
+    }
   })
 }
 
-export function logout() {
+export function getInfo(token) {
   return request({
-    url: '/login/logout',
-    method: 'post'
-  })
-}
-
-export function getUserInfo(token) {
-  return request({
+    baseURL: 'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin',
     url: '/user/info',
     method: 'get',
     params: { token }
   })
 }
 
+export function logout() {
+  return request({
+    baseURL: 'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin',
+    url: '/user/logout',
+    method: 'post'
+  })
+}
