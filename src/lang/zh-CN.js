@@ -37,7 +37,7 @@ export default {
   },
   login: {
     slogan: '科技让体育更美好',
-    logIn: '登录',
+    logIn: '登 录',
     username: '账号',
     password: '密码',
     recommendBrowser: '建议使用谷歌、火狐、搜狗、360浏览器(极速模式)',

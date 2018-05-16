@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const _import = require('./_import_' + process.env.NODE_ENV) // 生产环境使用路由懒加载，开发环境懒加载热更新很慢
 // in development-env not use lazy-loading, because lazy-loading too many pages will cause webpack hot update too slow. so only in production use lazy-loading;
-// detail: https://panjiachen.github.io/vue-element-admin-site/#/lazy-loading
 
 Vue.use(Router)
 
@@ -24,15 +23,15 @@ import Layout from '../views/layout/Layout'
 // 所有权限通用路由表
 // 如首页和登录页和一些不用权限的公用页面
 export const constantRouterMap = [
-  { path: '/login', component: _import('login/index'), hidden: true },
-  { path: '/404', component: _import('404'), hidden: true },
+  { path: '/login', name: 'Login', component: _import('login/index'), hidden: true },
+  { path: '/404', name: 'NotFound', component: _import('404'), hidden: true },
   {
     path: '/',
     component: Layout,
     redirect: '/home',
     name: 'Home',
     hidden: true,
-    meta: { title: 'home' },
+    meta: { title: 'home' }, // title需要与语言包里的字段相对应
     children: [{
       path: 'home',
       component: _import('home/index')
@@ -48,40 +47,4 @@ export default new Router({
 
 // 异步挂载的路由
 // 动态需要根据权限加载的路由表
-export const asyncRouterMap = [
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: _import('table/index'),
-        meta: { title: 'Table', icon: 'table' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: _import('tree/index'),
-        meta: { title: 'Tree', icon: 'tree', roles: ['bear'] }
-      }
-    ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'Form',
-        component: _import('form/index'),
-        meta: { title: 'Form', icon: 'form' }
-      }
-    ]
-  },
-  { path: '*', redirect: '/404', hidden: true }
-]
+export const asyncRouterMap = []

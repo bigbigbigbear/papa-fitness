@@ -4,6 +4,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import i18n from './lang' // 国际化语言包
 import '@/styles/index.scss' // 全局 css
+import '@/themes/orange/index.css' // element主题
+// import '@/styles/element-variables.scss' // element主题
 
 import App from './App'
 import router from './router'
