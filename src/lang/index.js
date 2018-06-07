@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
+import Cookies from 'js-cookie'
 import elementEnLocale from 'element-ui/lib/locale/lang/en' // element-ui lang
 import elementZhLocale from 'element-ui/lib/locale/lang/zh-CN' // element-ui lang
 import enLocale from './en'
@@ -19,7 +20,7 @@ const messages = {
 }
 
 const i18n = new VueI18n({
-  locale: localStorage.getItem('language') || 'zh-CN', // 设置语言,组件中切换语言 this.$i18n.locale = 'en';localStorage.setItem('language','en')
+  locale: Cookies.get('language') || 'zh-CN', // 设置语言,组件中切换语言 this.$i18n.locale = 'en';Cookies.set('language','en')
   messages // set locale messages
 })
 

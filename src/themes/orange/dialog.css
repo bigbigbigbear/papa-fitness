@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BEM support Func
  -------------------------- */
 /* Element Chalk Variables */
@@ -5,7 +6,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -124,7 +125,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -305,9 +306,9 @@
     cursor: pointer;
     font-size: 16px; }
     .el-dialog__headerbtn .el-dialog__close {
-      color: #909399; }
+      color: #008CEE; }
     .el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close {
-      color: #f56839; }
+      color: #FF7C35; }
   .el-dialog__title {
     line-height: 24px;
     font-size: 18px;

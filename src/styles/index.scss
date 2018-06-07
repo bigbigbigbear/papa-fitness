@@ -3,7 +3,7 @@
 @import './transition.scss';
 @import './element-ui.scss';
 @import './sidebar.scss';
-
+@import './btn.scss';
 body {
   height: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -12,16 +12,41 @@ body {
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 
-label {
-  font-weight: 700;
-}
-
 html {
   height: 100%;
   box-sizing: border-box;
 }
 
-#app{
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
   height: 100%;
 }
 
@@ -40,10 +65,6 @@ a:hover {
   text-decoration: none;
 }
 
-div:focus{
-  outline: none;
- }
-
 a:focus,
 a:active {
   outline: none;
@@ -57,6 +78,36 @@ a:hover {
   text-decoration: none;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+div:focus {
+  outline: none;
+}
+
+// img {
+//   width: 100%;
+// }
+// 浮动
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
 .clearfix {
   &:after {
     visibility: hidden;
@@ -68,11 +119,240 @@ a:hover {
   }
 }
 
-//main-container全局样式
-.app-main{
-  min-height: 100%
+// padding,margin
+.pr-0 {
+  padding-right: 0;
 }
 
-.app-container {
-  padding: 20px;
+.pl-0 {
+  padding-left: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.pv-3 {
+  padding: 3px 0;
+}
+
+.ph-3 {
+  padding: 0 3px;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.ph-5 {
+  padding: 0 5px;
+}
+
+.pv-5 {
+  padding: 5px 0;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.ph-10 {
+  padding: 0 10px;
+}
+
+.pv-10 {
+  padding: 10px 0;
+}
+
+.ph-20 {
+  padding: 0 20px;
+}
+
+.pt-16 {
+  padding-top: 16px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// 字体
+.font-grey {
+  color: #909399;
+}
+
+.font-606 {
+  color: #606266;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+// 背景
+.bg-white {
+  color: #fff;
+}
+
+// 解决chrome表单黄底问题
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+//main-container全局样式
+.app-main {
+  min-height: 100%;
+  background-color: #f0f2f5;
+}
+
+.app-container--hd {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 20px 0;
+  background-color: #fff;
+  .el-tabs__header {
+    margin-bottom: 0;
+  }
+  .btn-wrapper {
+    position: absolute;
+    right: 40px;
+    bottom: 24px;
+  }
+}
+
+// 容器body
+.app-container--bd {
+  padding: 10px 0 20px;
+  margin: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  .filter-container {
+    .filter-item {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 10px;
+    }
+  }
+  .table-container {
+    position: relative;
+  }
+  .components-container {
+    margin: 30px 50px;
+    position: relative;
+  }
+  .pagination-container {
+    margin-top: 20px;
+  }
+}
+
+// 新增编辑表单
+.form-container {
+  .form-section {
+    margin: 20px;
+    .form-section--hd {
+      padding: 15px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #E4E7ED;
+    }
+    .form-section--bd {
+      padding: 15px 20px;
+      background-color: #fff;
+    }
+    .form-section--ft {
+      padding: 15px 20px;
+    }
+  }
+}
+
+// 会员标签
+.tag {
+  display: inline-block;
+  padding: 0 10px;
+  margin-right: 20px;
+  color: #606266;
+  cursor: pointer;
+  &:hover {
+    background-color: #E7F7FF
+  }
+  &.active {
+    background-color: #E7F7FF
+  }
+}
+
+// section信息，会员主页那里
+.section {
+  padding: 0 0 24px;
+  .section--hd {
+    padding: 10px 0;
+  }
+  .section--bd {
+    line-height: 2;
+    color: #606266;
+    font-size: 14px;
+  }
+}
+
+// 水平线
+hr {
+  width: 100%;
+  height: 0;
+  border: none;
+  border-top: 1px solid #DCDFE6;
+  margin: 20px 0;
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+// display
+.block {
+  display: block;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
 }

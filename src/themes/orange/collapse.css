@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BEM support Func
  -------------------------- */
 /* Element Chalk Variables */
@@ -5,7 +6,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -124,7 +125,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -231,8 +232,8 @@
 /* Break-point
 --------------------------*/
 .el-collapse {
-  border-top: 1px solid #f98839;
-  border-bottom: 1px solid #f98839; }
+  border-top: 1px solid #dcdfe6;
+  border-bottom: 1px solid #dcdfe6; }
 
 .el-collapse-item__header {
   height: 48px;
@@ -240,7 +241,7 @@
   background-color: #fff;
   color: #303133;
   cursor: pointer;
-  border-bottom: 1px solid #f98839;
+  border-bottom: 1px solid #dcdfe6;
   font-size: 13px;
   font-weight: 500;
   -webkit-transition: border-bottom-color .3s;
@@ -259,7 +260,7 @@
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg); }
   .el-collapse-item__header.focusing:focus:not(:hover) {
-    color: #f56839; }
+    color: #FF7C35; }
   .el-collapse-item__header.is-active {
     border-bottom-color: transparent; }
 
@@ -269,7 +270,7 @@
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-bottom: 1px solid #f98839; }
+  border-bottom: 1px solid #dcdfe6; }
 
 .el-collapse-item__content {
   padding-bottom: 25px;

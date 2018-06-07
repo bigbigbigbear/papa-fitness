@@ -1,44 +1,39 @@
 import request from '@/utils/request'
 
-export function login(username, password) {
+/**
+ * 登录
+ * @param {account} 用户名
+ * @param {password} 密码
+ */
+export function login (params) {
   return request({
-    baseURL: 'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin',
-    url: '/user/login',
+    url: '/business/account/login',
     method: 'post',
-    data: {
-      username,
-      password
-    }
+    data: params
   })
 }
 
-export function getInfo(token) {
+export function getInfo (params) {
   return request({
-    baseURL: 'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin',
-    url: '/user/info',
+    url: '/admin/account/get',
+    method: 'post',
+    data: params
+  })
+}
+
+export function tokenGet (params) {
+  return request({
+    url: '/token',
     method: 'get',
-    params: { token }
+    params
   })
 }
 
 // 获取角色的菜单
-export function getMenu(menu_sys) {
+export function getMenu (params) {
   return request({
-    url: '/admin/auth/getMenu',
+    url: '/business/account/getMenu',
     method: 'post',
-    data: {
-      menu_sys
-    },
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }
-  })
-}
-
-export function logout() {
-  return request({
-    baseURL: 'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin',
-    url: '/user/logout',
-    method: 'post'
+    data: params
   })
 }

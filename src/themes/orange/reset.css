@@ -4,7 +4,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -118,12 +118,12 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 a {
-  color: #f56839;
+  color: #FF7C35;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #f78661; }
+    color: #ff965d; }
   a:active {
-    color: #dd5e33; }
+    color: #e67030; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #606266;

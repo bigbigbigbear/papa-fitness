@@ -1,9 +1,10 @@
+@charset "UTF-8";
 /* Element Chalk Variables */
 /* Transition
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -116,7 +117,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -235,7 +236,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -346,7 +347,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -642,9 +643,9 @@
   line-height: 1; }
 
 .el-range-editor.is-active {
-  border-color: #f56839; }
+  border-color: #FF7C35; }
   .el-range-editor.is-active:hover {
-    border-color: #f56839; }
+    border-color: #FF7C35; }
 
 .el-range-editor--medium.el-input__inner {
   height: 36px; }
@@ -689,14 +690,14 @@
   line-height: 20px; }
 
 .el-range-editor.is-disabled {
-  background-color: #f5f7fa;
-  border-color: #f77839;
+  background-color: #f0f2f5;
+  border-color: #dcdfe6;
   color: #c0c4cc;
   cursor: not-allowed; }
   .el-range-editor.is-disabled:hover, .el-range-editor.is-disabled:focus {
-    border-color: #f77839; }
+    border-color: #dcdfe6; }
   .el-range-editor.is-disabled input {
-    background-color: #f5f7fa;
+    background-color: #f0f2f5;
     color: #c0c4cc;
     cursor: not-allowed; }
     .el-range-editor.is-disabled input::-webkit-input-placeholder {
@@ -715,7 +716,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -828,7 +829,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -947,7 +948,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -1055,7 +1056,7 @@
 --------------------------*/
 .el-picker-panel {
   color: #606266;
-  border: 1px solid #f77839;
+  border: 1px solid #dcdfe6;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
@@ -1089,10 +1090,10 @@
     outline: none;
     cursor: pointer; }
     .el-picker-panel__shortcut:hover {
-      color: #f56839; }
+      color: #FF7C35; }
     .el-picker-panel__shortcut.active {
       background-color: #e6f1fe;
-      color: #f56839; }
+      color: #FF7C35; }
   .el-picker-panel__btn {
     border: 1px solid #dcdcdc;
     color: #333;
@@ -1115,7 +1116,7 @@
     outline: none;
     margin-top: 8px; }
     .el-picker-panel__icon-btn:hover {
-      color: #f56839; }
+      color: #FF7C35; }
     .el-picker-panel__icon-btn.is-disabled {
       color: #bbb; }
       .el-picker-panel__icon-btn.is-disabled:hover {
@@ -1172,7 +1173,7 @@
     .el-date-picker__header--bordered {
       margin-bottom: 0;
       padding-bottom: 12px;
-      border-bottom: solid 1px #f98839; }
+      border-bottom: solid 1px #dcdfe6; }
       .el-date-picker__header--bordered + .el-picker-panel__content {
         margin-top: 0; }
   .el-date-picker__header-label {
@@ -1184,9 +1185,9 @@
     cursor: pointer;
     color: #606266; }
     .el-date-picker__header-label:hover {
-      color: #f56839; }
+      color: #FF7C35; }
     .el-date-picker__header-label.active {
-      color: #f56839; }
+      color: #FF7C35; }
   .el-date-picker__prev-btn {
     float: left; }
   .el-date-picker__next-btn {
@@ -1207,7 +1208,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -1326,7 +1327,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -1484,7 +1485,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -1603,7 +1604,7 @@
 -------------------------- */
 /* Colors
 -------------------------- */
-/* $--color-primary: #409EFF !default;*/
+/* 主题色*/
 /* 53a8ff */
 /* 66b1ff */
 /* 79bbff */
@@ -1734,7 +1735,7 @@
   bottom: -6px;
   left: 50%;
   margin-right: 3px;
-  border-top-color: #f98839;
+  border-top-color: #dcdfe6;
   border-bottom-width: 0; }
   .el-popper[x-placement^="top"] .popper__arrow::after {
     bottom: 1px;
@@ -1750,7 +1751,7 @@
   left: 50%;
   margin-right: 3px;
   border-top-width: 0;
-  border-bottom-color: #f98839; }
+  border-bottom-color: #dcdfe6; }
   .el-popper[x-placement^="bottom"] .popper__arrow::after {
     top: 1px;
     margin-left: -6px;
@@ -1764,7 +1765,7 @@
   top: 50%;
   left: -6px;
   margin-bottom: 3px;
-  border-right-color: #f98839;
+  border-right-color: #dcdfe6;
   border-left-width: 0; }
   .el-popper[x-placement^="right"] .popper__arrow::after {
     bottom: -6px;
@@ -1780,7 +1781,7 @@
   right: -6px;
   margin-bottom: 3px;
   border-right-width: 0;
-  border-left-color: #f98839; }
+  border-left-color: #dcdfe6; }
   .el-popper[x-placement^="left"] .popper__arrow::after {
     right: 1px;
     bottom: -6px;
@@ -1802,14 +1803,14 @@
   line-height: 20px; }
 
 .time-select-item.selected:not(.disabled) {
-  color: #f56839;
+  color: #FF7C35;
   font-weight: bold; }
 
 .time-select-item.disabled {
-  color: #f77839;
+  color: #dcdfe6;
   cursor: not-allowed; }
 
 .time-select-item:hover {
-  background-color: #f5f7fa;
+  background-color: #f0f2f5;
   font-weight: bold;
   cursor: pointer; }

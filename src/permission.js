@@ -3,7 +3,7 @@ import store from './store'
 import { Message } from 'element-ui'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
-import { getToken } from '@/utils/auth' // getToken from cookie
+import { getToken, removeToken } from '@/utils/auth' // getToken from cookie
 
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
@@ -15,8 +15,7 @@ router.beforeEach((to, from, next) => {
     // 判断是否有token
     /* has token*/
     if (to.path === '/login') {
-      window.sessionStorage.removeItem('user-info')
-      window.sessionStorage.removeItem('user-token')
+      removeToken()
       next({ path: '/' })
       NProgress.done() // if current page is dashboard will not trigger	afterEach hook, so manually handle it
     } else {
@@ -26,13 +25,13 @@ router.beforeEach((to, from, next) => {
           .dispatch('GetInfo')
           .then(res => {
             // 拉取user_info
-            store.dispatch('GetMenu', 3).then(() => {
+            store.dispatch('GetMenu').then(() => {
               router.addRoutes(store.getters.addRouters) // 动态添加可访问路由表
               next({ ...to, replace: true }) // hack方法
             })
           })
           .catch(err => {
-            store.dispatch('FedLogOut').then(() => {
+            store.dispatch('LogOut').then(() => {
               Message.error(err || '验证失败，请重新登录')
               next({ path: '/' })
             })
